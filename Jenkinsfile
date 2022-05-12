@@ -4,14 +4,9 @@ pipeline {
     }
 
     environment {
-        // Uncomment below for hybrid
-        //APIGEE_SA_CREDS = credentials('apigee-service-account')
-        //HOME = '.'
-        //ORG = 'amer-cs-hybrid-demo2'
-
-        APIGEE_SA_CREDS = credentials('apigee-ngsaas-service-account')
+        APIGEE_SA_CREDS = credentials('apigee-service-account')
         HOME = '.'
-        ORG = 'ssv-apigee-ngsaas-project2'
+        ORG = 'miguelmendoza-external'
     }
 
     stages {
@@ -33,13 +28,13 @@ pipeline {
 
                 if (env.GIT_BRANCH == "main") {
                     env.APIGEE_PREFIX = ""
-                    env.APIGEE_PROFILE = "ngsaas-test"
+                    env.APIGEE_PROFILE = "test"
                 } else if (env.GIT_BRANCH == "prod") {
                     env.APIGEE_PREFIX = ""
-                    env.APIGEE_PROFILE = "ngsaas-prod"
+                    env.APIGEE_PROFILE = "prod"
                 } else { //feature branches
                     env.APIGEE_PREFIX = "jenkins"
-                    env.APIGEE_PROFILE = "ngsaas-dev"
+                    env.APIGEE_PROFILE = "dev"
                 }
               }
               sh "mvn clean"
