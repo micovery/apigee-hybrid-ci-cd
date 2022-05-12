@@ -7,7 +7,8 @@ RUN apt-get update $quiet &&\
     apt-get update $quiet  &&\
     apt-get install $quiet nodejs
 
-RUN npm install -g apigeelint &&\
+RUN npm install --allow-unauthenticated -g apigeelint &&\
+    npm install --allow-unauthenticated  -g cucumber &&\
     apigeelint -V
 
 ENTRYPOINT ["bash", "-c"]
