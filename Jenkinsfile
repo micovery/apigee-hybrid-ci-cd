@@ -58,7 +58,7 @@ pipeline {
         }
         stage('Functional Test') {
           steps {
-            sh "sh "npm run integration-test"
+            sh "sh npm run integration-test"
           }
         }
     }
