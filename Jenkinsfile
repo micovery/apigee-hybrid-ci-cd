@@ -65,15 +65,15 @@ pipeline {
 
     post { 
         always {
-            publishHTML(target: [
-                                  allowMissing: false,
-                                  alwaysLinkToLastBuild: false,
-                                  keepAll: false,
-                                  reportDir: "coverage/lcov-report",
-                                  reportFiles: 'index.html',
-                                  reportName: 'HTML Report'
-                                ]
-                        )
+//             publishHTML(target: [
+//                                   allowMissing: false,
+//                                   alwaysLinkToLastBuild: false,
+//                                   keepAll: false,
+//                                   reportDir: "coverage/lcov-report",
+//                                   reportFiles: 'index.html',
+//                                   reportName: 'HTML Report'
+//                                 ]
+//                         )
 
             step([
                     $class: 'CucumberReportPublisher',
