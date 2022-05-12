@@ -9,8 +9,8 @@ Feature: Get Currency Rates Feature
 		And I should see the rates for the latest exchange day
 
 	Scenario: I should be able to set a different base currency
-		When I request all exchange rates with GBP as the base currency
-		Then I should see GBP as the base currency
+		When I request all exchange rates with EUR as the base currency
+		Then I should see EUR as the base currency
 		And I should see the rates for the latest exchange day
 
 	Scenario Outline: I should be able to set an exchange day
@@ -27,8 +27,8 @@ Feature: Get Currency Rates Feature
 			| 2016-06-10     | 2016-06-10    |
 
 	Scenario: I should be able to set a base currency and exchange day
-		When I request all exchange rates with GBP as the base currency for 2016-05-10
-		Then I should see GBP as the base currency
+		When I request all exchange rates with EUR as the base currency for 2016-05-10
+		Then I should see EUR as the base currency
 		And I should see the rates for 2016-05-10
 
 	Scenario Outline: I should get an error for invalid date format
