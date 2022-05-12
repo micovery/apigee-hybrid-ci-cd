@@ -40,7 +40,7 @@
 			<id>dev</id>
 			<properties>
 				<apigee.profile>dev</apigee.profile>
-				<apigee.env>eval</apigee.env>
+				<apigee.env>dev</apigee.env>
 				<apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
 				<apigee.apiversion>v1</apigee.apiversion>
 				<apigee.org>${org}</apigee.org>
@@ -49,7 +49,7 @@
 				<apigee.serviceaccount.file>${file}</apigee.serviceaccount.file>
 				<apigee.config.dir>./target/resources/edge</apigee.config.dir>
 				<apigee.config.options>update</apigee.config.options>
-				<api.northbound.domain>miguelmendoza-external.apigeedemo.com</api.northbound.domain>
+				<api.northbound.domain>api-dev.apigeedemo.com</api.northbound.domain>
 				<api.testtag>~@wip,~@mock</api.testtag>
 			</properties>
 		</profile>
@@ -57,7 +57,7 @@
 			<id>test</id>
 			<properties>
 				<apigee.profile>test</apigee.profile>
-				<apigee.env>eval</apigee.env>
+				<apigee.env>dev</apigee.env>
 				<apigee.hosturl>https://apigee.googleapis.com</apigee.hosturl>
 				<apigee.apiversion>v1</apigee.apiversion>
 				<apigee.org>${org}</apigee.org>
@@ -66,7 +66,7 @@
 				<apigee.serviceaccount.file>${file}</apigee.serviceaccount.file>
 				<apigee.config.dir>./target/resources/edge</apigee.config.dir>
 				<apigee.config.options>update</apigee.config.options>
-				<api.northbound.domain>miguelmendoza-external.apigeedemo.com</api.northbound.domain>
+				<api.northbound.domain>api-test.apigeedemo.com</api.northbound.domain>
 				<api.testtag>~@wip,~@mock</api.testtag>
 			</properties>
 		</profile>
@@ -83,7 +83,7 @@
 				<apigee.serviceaccount.file>${file}</apigee.serviceaccount.file>
 				<apigee.config.dir>./target/resources/edge</apigee.config.dir>
 				<apigee.config.options>update</apigee.config.options>
-				<api.northbound.domain>miguelmendoza-external.apigeedemo.com</api.northbound.domain>
+				<api.northbound.domain>api.apigeedemo.com</api.northbound.domain>
 				<api.testtag>~@wip,~@mock</api.testtag>
 			</properties>
 		</profile>
