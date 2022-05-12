@@ -15,16 +15,6 @@ pipeline {
               script{
 
                 // Uncomment below for hybrid
-                /*if (env.GIT_BRANCH == "master") {
-                    env.APIGEE_PREFIX = ""
-                    env.APIGEE_PROFILE = "test"
-                } else if (env.GIT_BRANCH == "prod") {
-                    env.APIGEE_PREFIX = ""
-                    env.APIGEE_PROFILE = "prod"
-                } else { //feature branches
-                    env.APIGEE_PREFIX = "jenkins"
-                    env.APIGEE_PROFILE = "test"
-                }*/
 
                 if (env.GIT_BRANCH == "main") {
                     env.APIGEE_PREFIX = ""
